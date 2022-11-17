@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/slowlearnerpredict" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/slowlearnerprediction" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/slowlearnpredict" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/slowlearnpredictor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/slowlearnpredictor/slowlearnpredictor" vcs="Git" />
   </component>
 </project>

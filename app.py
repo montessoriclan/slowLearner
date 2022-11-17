@@ -11,19 +11,17 @@ input_age = st.number_input("Enter the age")
 input_list.append(input_age)
 
 disability = st.radio("Choose a disability",
-                      ('NA', 'Visual Impairment', 'Hearing Impairment', 'autism', 'Physical', 'Intellectual'), index=0)
+                      ('NA', 'Physical ', 'Sensory', 'Developmental', 'Behavioural'), index=0)
 if disability == 'NA':
     input_list.append(0)
-elif disability == 'Visual Impairment':
-    input_list.append(1)
-elif disability == 'Hearing Impairment':
-    input_list.append(2)
-elif disability == 'autism':
-    input_list.append(3)
 elif disability == 'Physical':
+    input_list.append(1)
+elif disability == 'Sensory':
+    input_list.append(2)
+elif disability == 'Developmental':
+    input_list.append(3)
+elif disability == 'Behavioural':
     input_list.append(4)
-elif disability == 'Intellectual':
-    input_list.append(5)
 
 input_iq = st.number_input("enter the IQ score")
 input_list.append(input_iq)
