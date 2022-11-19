@@ -2,13 +2,17 @@ import pickle
 import numpy as np
 import streamlit as st
 
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 mode = pickle.load(open('prediction.pkl', 'rb'))
 input_list = []
 
-st.title("Slow learner prediction")
+st.title("App name")
+st.header("Slow learner prediction")
 
-input_age = st.number_input("Enter the age")
-input_list.append(input_age)
+int_val = st.slider('Enter the age', min_value=5, max_value=10, step=1)
+input_list.append(int_val)
 
 disability = st.radio("Choose a disability",
                       ('NA', 'Physical ', 'Sensory', 'Developmental', 'Behavioural'), index=0)
@@ -23,7 +27,7 @@ elif disability == 'Developmental':
 elif disability == 'Behavioural':
     input_list.append(4)
 
-input_iq = st.number_input("enter the IQ score")
+input_iq = st.number_input("enter the IQ score", min_value=0)
 input_list.append(input_iq)
 
 handwriting = st.radio("How is the handwriting", ('legible', 'illegible'))
@@ -50,7 +54,7 @@ if attention == 'yes':
 else:
     input_list.append(0)
 
-attention_span = st.number_input("What is the attention span of the child")
+attention_span = st.number_input("What is the attention span of the child", min_value=0)
 input_list.append(attention_span)
 
 jokes = st.radio("Does the child laugh for jokes", ('yes', 'no'))
@@ -75,7 +79,10 @@ if st.button('Check'):
     array = np.asarray(input_list)
     resList = array.reshape(1, -1)
 
-    result = mode.predict(resList)[0]
+    try:
+        result = mode.predict(resList)[0]
+    except:
+        st.error("Please input correct number of elements")
 
     if result == 1:
         st.header("Slow Learner")
