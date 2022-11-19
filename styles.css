@@ -1,12 +1,29 @@
 .css-1n76uvr.e1tzin5v0{
-    background-color: #15172b;
+    background-color: #432C7A;
   border-radius: 20px;
   box-sizing: border-box;
   height: 500px;
   padding: 20px;
   width: 800px;
 color: white;
+display: flex;
+align-items: center;
+justify-items: center;
+flex-direction: column;
 }
+
+.css-k1vhr4{
+  background-color: #432C7A;
+}
+
+.css-12oz5g7{
+  padding: 10px;
+  background-color: #432C7A;
+}
+.css-1avcm0n.e8zbici2{
+  background-color: #432C7A;
+}
+
 .stSlider{
 width: 40%;
 }
@@ -40,4 +57,40 @@ div[role=radiogroup]{
 .st-c8{
 
 color:white;
+}
+
+footer{
+  display: none;
+}
+
+.css-10trblm.e16nr0p30{
+  color: rgb(237, 230, 230);
+  font-family: sans-serif;
+  font-size: 40px;
+  text-shadow: 1px 0px 8px #e4dcdc;
+  font-weight: 500;
+  
+  /* margin-top: 10px; */
+}
+
+.css-demzbm{
+  background-color: white;
+}
+
+.StyledThumbValue.css-10y5sf6.e88czh82{
+  color: white;
+}
+
+.css-1yy6isu p{
+  font-size: 18px;
+}
+
+.css-5uatcg.edgvbvh10{
+  background-color: white;
+  color: #432C7A;
+  width: 100%;
+}
+
+.css-1lsmgbg.egzxvld0{
+  display: none;
 }

@@ -27,7 +27,7 @@ elif disability == 'Developmental':
 elif disability == 'Behavioural':
     input_list.append(4)
 
-input_iq = st.number_input("enter the IQ score", min_value=0)
+input_iq = st.number_input("Enter the IQ score", min_value=0)
 input_list.append(input_iq)
 
 handwriting = st.radio("How is the handwriting", ('legible', 'illegible'))
