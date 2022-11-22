@@ -10,12 +10,26 @@ input_list = []
 
 st.title("App name")
 st.header("Slow learner prediction")
+st.sidebar.success("refer above pages")
+
+st.header("Basic Information to know")
+st.subheader("Physical Disabilities")
+st.write("it comprises of Cerebral palsy,Spinal cord injuries,Amputation, Spina bifida, Musculoskeletal injuries")
+st.subheader("Sensory Disabilities")
+st.write("It comprises of Blindness and Low Vision, Hearing loss and Deafness, Deaf-Blindness, Sensory Processing Disorder ")
+st.subheader("Developmental Disabilities")
+st.write("It comprises of  Autism, Behavior disorder, Down syndrome, Fetal alcohol syndrome, Intellectual disability,")
+st.subheader("Cognitive disabilities")
+st.write("It comprises of aphasia, autism, attention deficit, dyslexia, dyscalculia, intellectual and memory loss")
 
 int_val = st.slider('Enter the age', min_value=5, max_value=10, step=1)
 input_list.append(int_val)
 
+
+
+
 disability = st.radio("Choose a disability",
-                      ('NA', 'Physical ', 'Sensory', 'Developmental', 'Behavioural'), index=0)
+                      ('NA', 'Physical ', 'Sensory', 'Developmental', 'Cognitive'), index=0)
 if disability == 'NA':
     input_list.append(0)
 elif disability == 'Physical':
@@ -24,7 +38,7 @@ elif disability == 'Sensory':
     input_list.append(2)
 elif disability == 'Developmental':
     input_list.append(3)
-elif disability == 'Behavioural':
+elif disability == 'Cognitive':
     input_list.append(4)
 
 input_iq = st.number_input("Enter the IQ score", min_value=0)
@@ -78,7 +92,6 @@ else:
 if st.button('Check'):
     array = np.asarray(input_list)
     resList = array.reshape(1, -1)
-
     try:
         result = mode.predict(resList)[0]
     except:
