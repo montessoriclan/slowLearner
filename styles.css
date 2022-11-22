@@ -27,10 +27,23 @@ flex-direction: column;
 .stSlider{
 width: 40%;
 }
+
 .css-10trblm.e16nr0p30{
  color: #eee;
   font-family: sans-serif;
-  font-size: 36px;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+h1{
+font-size:50px;
+}
+
+css-zt5igj e16nr0p33{
+color: #eee;
+  font-family: sans-serif;
+  font-size: 30px;
   font-weight: 600;
   margin-top: 30px;
 }

@@ -8,7 +8,7 @@ with open('styles.css') as f:
 mode = pickle.load(open('prediction.pkl', 'rb'))
 input_list = []
 
-st.title("App name")
+st.title("LAYOP")
 st.header("Slow learner prediction")
 st.sidebar.success("refer above pages")
 
